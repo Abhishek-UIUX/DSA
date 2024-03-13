@@ -99,6 +99,8 @@ console.log(arr);
 
 ### `splice()` vs `slice()`
 ```javascript
+// 1) splice changes the original array, where as slice does not change the original array.
+// 2) splice returns removed elements, whereas slice does not return anything.
 const subArr = arr.slice(1, 4); // [start, end)
 console.log(subArr);
 ```
