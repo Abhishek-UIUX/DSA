@@ -186,6 +186,7 @@ console.log(flattedArray);
 
 ### `filter()` vs `find()`
 ```javascript
+// Find will return the first element that satisfies the condition whereas filter returns all elements which satisfy the condition.
 const positiveNumber = x.find((ele, i) => ele > 0);
 console.log(positiveNumber);
 ```
