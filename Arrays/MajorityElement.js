@@ -14,7 +14,8 @@ const majorityElement = function (nums) {
 
   return -1;
 };
-
+// Time Complexity: O(n^2)
+// Space Complexity: O(1)
 let result = majorityElement([2, 2, 1, 1, 1, 2, 2]);
 console.log(result);
 
@@ -31,7 +32,8 @@ const majorityElementB = function (nums) {
   }
   return -1;
 };
-
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 console.log(majorityElementB([2, 2, 1, 1, 1, 1, 2, 2]));
 
 // Most Optimal solution
@@ -51,5 +53,6 @@ const majorityElementC = function (nums) {
   }
   return current;
 };
-
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 console.log(majorityElementC([6, 5, 5]));
