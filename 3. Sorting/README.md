@@ -19,7 +19,6 @@ console.log(str.split("").sort().join("")) // "Abehhiks
 
 ### Bubble Sort In JavaScript
 ```javascript
-// Bubble Sort
 // Time complexity: O(n^2).
 // Space Complexity: O(1).
 // Not suitable for large data sets as it is inefficient.
@@ -48,4 +47,55 @@ function bubbleSort(arr) {
 
 console.log(bubbleSort(arr1));
 
+```
+
+### Insertion Sort In JavaScript
+```javascript
+// Time complexity: O(n*2)
+// Worst and average case time complexity: O(n*2). Best case time complexity: O(n).
+// Space complexity: O(1).
+const arr2 = [8, 4, 1, 5, 9, 2];
+
+function insertionSort(arr) {
+  let n = arr.length;
+  for (let i = 0; i < n; i++) {
+    let temp = arr[i];
+    let j = i - 1;
+
+    while (j >= 0 && arr[j] > temp) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+
+    arr[j + 1] = temp;
+  }
+
+  return arr;
+}
+console.log(insertionSort(arr2));
+
+```
+
+### Selection Sort In JavaScript
+```javascript
+// Time complexity: O(n*2)
+// Space Complexity: O(1).
+// Suitable for small datasets or when memory space is limited.
+const arr3 = [8, 4, 1, 5, 9, 2];
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let minimum_num = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[minimum_num]) {
+        minimum_num = j;
+      }
+    }
+    if (minimum_num != i) {
+      swap(arr, minimum_num, i);
+    }
+  }
+
+  return arr;
+}
+console.log(selectionSort(arr3));
 ```
